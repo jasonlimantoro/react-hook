@@ -1,24 +1,21 @@
 import React from "react";
 import Counter from "./components/Counter";
+import Row from "./components/Row";
 import "./App.css";
 
 const App = () => {
-	const AppStyle = {
-		display: "flex",
-		justifyContent: "space-evenly"
-	};
 	return (
 		<React.Fragment>
-			<div style={AppStyle}>
+			<Row>
         Auto
 				<Counter initial={0} />
 				<Counter initial={0} />
-			</div>
-      <div style={AppStyle}>
+			</Row>
+      <Row>
         Manual
 				<Counter initial={0} autoIncrement />
 				<Counter initial={0} autoDecrement/>
-			</div>
+			</Row>
 		</React.Fragment>
 	);
 };
