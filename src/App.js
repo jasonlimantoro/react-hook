@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Counter from "./components/Counter";
+import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => {
+	const AppStyle = {
+		display: "flex",
+		justifyContent: "space-evenly"
+	};
+	return (
+		<React.Fragment>
+			<div style={AppStyle}>
+        Auto
+				<Counter initial={0} />
+				<Counter initial={0} />
+			</div>
+      <div style={AppStyle}>
+        Manual
+				<Counter initial={0} autoIncrement />
+				<Counter initial={0} autoDecrement/>
+			</div>
+		</React.Fragment>
+	);
+};
 
 export default App;
