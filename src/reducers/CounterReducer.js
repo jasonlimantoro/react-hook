@@ -36,6 +36,12 @@ function useCounterReducer(initial) {
         };
       }
 
+      case "RESET" : {
+        return {
+          ...state,
+          counter : initial,
+        }
+      }
       default:
         return state;
     }

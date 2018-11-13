@@ -21,3 +21,9 @@ export const sqrt = () => {
     type: "SQUARE ROOT"
   }
 };
+
+export const reset = () => {
+  return {
+    type: "RESET"
+  }
+};

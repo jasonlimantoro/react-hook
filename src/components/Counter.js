@@ -1,5 +1,6 @@
-import React, { useEffect, } from 'react';
+import React from 'react';
 import useCounterReducer from "../reducers/CounterReducer";
+import  useAutoCounter  from "../effects/AutoCounterEffect";
 import * as CounterActionCreators from "../actions/CounterAction";
 
 
@@ -32,20 +33,5 @@ const Counter = ({ initial, autoIncrement, autoDecrement }) => {
     </div>
   );
 };
-
-function useAutoCounter(autoIncrement, autoDecrement, dispatch) {
-  useEffect(() => {
-    let operation;
-    if (autoIncrement) {
-      operation = 'INCREMENT';
-    } else if (autoDecrement) {
-      operation = 'DECREMENT';
-    }
-    const timeout = setTimeout(() => {
-      dispatch({ type: operation })
-    }, 1000);
-    return () => clearTimeout(timeout);
-  });
-}
 
 export default Counter;
