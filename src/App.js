@@ -7,12 +7,12 @@ const App = () => {
 	return (
 		<React.Fragment>
 			<Row>
-        Auto
+        Manual
 				<Counter initial={0} />
 				<Counter initial={0} />
 			</Row>
       <Row>
-        Manual
+        Auto
 				<Counter initial={0} autoIncrement />
 				<Counter initial={0} autoDecrement/>
 			</Row>
