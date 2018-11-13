@@ -8,21 +8,23 @@ const App = () => {
 	return (
 		<React.Fragment>
 			<Row>
-        Manual
+        <p>Manual</p>
 				<Counter initial={0} />
 				<Counter initial={0} />
 			</Row>
+
       <Row>
-        Auto
+        <p>Auto</p>
 				<Counter initial={0} autoIncrement />
 				<Counter initial={0} autoDecrement/>
 			</Row>
+
       <hr/>
       <Row>
         <p>Timer Count down</p>
         <Timer initial={100} autoDecrement />
       </Row>
-      <br/>
+
       <Row>
         <p>Timer Count Up</p>
         <Timer initial={0} autoIncrement />
