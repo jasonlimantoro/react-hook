@@ -20,6 +20,9 @@ const Counter = ({ initial, autoIncrement, autoDecrement }) => {
   const boundSqrt = () => (
     dispatch(CounterActionCreators.sqrt())
   );
+  const boundReset = () => (
+    dispatch(CounterActionCreators.reset())
+  );
 
   return (
     <div>
@@ -29,6 +32,7 @@ const Counter = ({ initial, autoIncrement, autoDecrement }) => {
         <button onClick={boundDecrement}>-</button>
         <button onClick={boundQuadratic}>^</button>
         <button onClick={boundSqrt}>&#8730;</button>
+        <button onClick={boundReset}>Reset</button>
       </div>
     </div>
   );
